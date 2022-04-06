@@ -3,7 +3,13 @@ const app = Vue.createApp({
     return {
       counter: 0,
       counter2: 0,
+      itemList: [],
     };
+  },
+  methods: {
+    addItem() {
+      this.itemList.push(new Date().getTime());
+    },
   },
   computed: {
     getResult() {
@@ -35,6 +41,12 @@ const app = Vue.createApp({
     },
     getResult2(newValue, oldValue) {
       console.log(`Watcher : Result-2 ${oldValue} => ${newValue}`);
+    },
+    itemList: {
+      deep: true,
+      handler(itemList) {
+        console.log("itemList :>> ", itemList);
+      },
     },
   },
 });

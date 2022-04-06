@@ -27,6 +27,11 @@
         <button @click="counter2--" class="btn btn-danger ms-3">-</button>
         <p>{{ getResult2 }}</p>
       </div>
+      <div class="border shadow m-4 p-2">
+        <pre>{{ itemList }} </pre>
+        <button class="btn btn-warning" @click="addItem">Add</button>
+      </div>
+    </div>
     </div>
     <script src="app.js"></script>
   </body>
