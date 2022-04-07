@@ -1,8 +1,15 @@
-const app = Vue.createApp({
+Vue.createApp({
   data() {
     return {
       textRed: "text-danger bg-white",
       counter: 0,
+      classes: [
+        "text-success",
+        "text-warning",
+        "text-info",
+        "text-primary",
+        "text-danger"
+      ]
     };
   },
   created() {
@@ -12,13 +19,7 @@ const app = Vue.createApp({
   },
   computed: {
     boxClass() {
-      return {
-        "text-success": this.counter === 0,
-        "text-warning": this.counter === 1,
-        "text-info": this.counter === 2,
-        "text-primary": this.counter === 3,
-        "text-danger": this.counter === 4,
-      };
+      return this.classes[this.counter % this.classes.length]
     },
   },
 }).mount("#app");
