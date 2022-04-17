@@ -1,6 +1,6 @@
 <template>
-  <ListSection :userList="userList" />
-  <AddSection @new-item="$emit('new-item', $event)" />
+  <ListSection />
+  <AddSection />
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
     ListSection,
     AddSection,
   },
-  props: ["userList"],
-  emits: ["new-item"],
+//   props: ["userList"],
+//   emits: ["new-item"],
 };
 </script>
