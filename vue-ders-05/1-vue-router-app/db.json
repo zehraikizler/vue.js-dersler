@@ -1,0 +1,16 @@
+{
+  "bookmarks": [
+    {
+      "title": "zehra",
+      "url": "https://github.com/zehraikizler/lesson-plan",
+      "description": "açıklama 1",
+      "id": 2
+    },
+    {
+      "title": "vue 3 eğitim",
+      "url": "https://vue3.org",
+      "description": "vue 3",
+      "id": 3
+    }
+  ]
+}
